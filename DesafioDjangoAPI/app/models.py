@@ -30,6 +30,9 @@ class Oferta(models.Model):
     amount = models.FloatField()
     amount_type = models.CharField(max_length=10)
 
+    def __str__(self):
+        return str(self.initial_value)
+
 
 class Lance(models.Model):
     id_provider = models.ForeignKey(Cliente, on_delete=models.CASCADE)
