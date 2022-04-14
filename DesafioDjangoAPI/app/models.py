@@ -8,6 +8,9 @@ class Empresa(models.Model):
     active = models.BooleanField()
     site = models.CharField(max_length=120)
 
+    def __str__(self):
+        return str(self.name)
+
 class Cliente(models.Model):
     id_cliente = models.AutoField(primary_key=True)
     name = models.CharField(max_length=120)
@@ -16,6 +19,9 @@ class Cliente(models.Model):
     active = models.BooleanField()
     site = models.CharField(max_length=120)
 
+    def __str__(self):
+        return str(self.name)
+
 class Oferta(models.Model):
     id_oferta = models.AutoField(primary_key=True)
     id_cliente2 = models.ForeignKey(Cliente, on_delete=models.CASCADE)
@@ -23,6 +29,7 @@ class Oferta(models.Model):
     initial_value = models.FloatField()
     amount = models.FloatField()
     amount_type = models.CharField(max_length=10)
+
 
 class Lance(models.Model):
     id_provider = models.ForeignKey(Cliente, on_delete=models.CASCADE)
