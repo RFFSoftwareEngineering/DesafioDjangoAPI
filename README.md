@@ -12,7 +12,7 @@
   
   -> O usuário pode ver qual lance foi aceito, mas não todos.
   
-  -> O useuário que tem o lance aceito, é notificado.
+  -> O usuário que tem o lance aceito, é notificado.
   
   -> Após o lance ser aceito ele some do "feed" da page de lances
   
